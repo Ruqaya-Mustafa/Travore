@@ -5,7 +5,6 @@ const expressLayout = require('express-ejs-layouts')
 const session = require('express-session')
 const passport = require('./lib/passportConfig')
 
-const profileRoute = require('./routes/profile')
 //Initialise our app (Invoking express and store it in app so we can use it easlly)
 const app = express();
 
@@ -37,7 +36,8 @@ app.use(function(req,res, next){
 
 
 //import our Routes
-const bookingRoute = require('./routes/booking')           
+// const bookingRoute = require('./routes/booking')           
+const profileRoute = require('./routes/profile')           
 
 
  
