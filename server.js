@@ -44,7 +44,7 @@ const bookingRoute = require('./routes/booking')
 //Mount our Routes
 app.use('/',bookingRoute)                
 
-
+console.log('hello')
 
 
 app.listen(port, ()=>{
