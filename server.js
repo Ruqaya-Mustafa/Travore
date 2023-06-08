@@ -5,7 +5,6 @@ const expressLayout = require('express-ejs-layouts')
 const session = require('express-session')
 const passport = require('./lib/passportConfig')
 
-
 //Initialise our app (Invoking express and store it in app so we can use it easlly)
 const app = express();
 
@@ -37,12 +36,15 @@ app.use(function(req,res, next){
 
 
 //import our Routes
+const profileRoute = require('./routes/profile')           
 const authRoute = require('./routes/auth')
 
 
 
 
+ 
 //Mount our Routes
+app.use('/', profileRoute)               
 app.use('/', authRoute)               
 
 
