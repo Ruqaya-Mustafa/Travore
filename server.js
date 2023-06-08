@@ -38,12 +38,13 @@ app.use(function(req,res, next){
 
 //import our Routes
 const authRoute = require('./routes/auth')
-
+const indexRoute = require('./routes/index')
 
 
 
 //Mount our Routes
 app.use('/', authRoute)               
+app.use('/', indexRoute)               
 
 
 
