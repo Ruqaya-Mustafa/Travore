@@ -50,7 +50,7 @@ app.use('/',bookingRoute)
 app.listen(port, ()=>{
     console.log(`The port ${port} is running`)
 })
-mongoose.connect('mongodb://127.0.0.1:27017/thelibrary',
+mongoose.connect('mongodb+srv://travore:Travore06@cluster0.8ghu9kc.mongodb.net/travore',
     {
         useNewUrlParser: true,
         useUnifiedTopology: true
