@@ -1,0 +1,12 @@
+{
+  "name": "travore",
+  "version": "1.0.0",
+  "description": "Travore is a name that combines the words \"travel\" and \"explore\". The website is about a travel agency that helps people to book their flights to explore new countries and adventures.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
