@@ -36,16 +36,17 @@ app.use(function(req,res, next){
 
 
 //import our Routes
-// const bookingRoute = require('./routes/booking')           
 const profileRoute = require('./routes/profile')           
+const authRoute = require('./routes/auth')
+
+
 
 
  
 //Mount our Routes
-// app.use('/',bookingRoute) 
 app.use('/', profileRoute)               
+app.use('/', authRoute)               
 
-console.log('hello')
 
 
 app.listen(port, ()=>{
