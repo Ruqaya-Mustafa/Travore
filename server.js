@@ -39,7 +39,7 @@ app.use(function(req,res, next){
 const profileRoute = require('./routes/profile')           
 const authRoute = require('./routes/auth')
 const bookingRoute = require('./routes/booking')
-
+const indexRoute = require('./routes/index')
 
 
 
@@ -47,7 +47,8 @@ const bookingRoute = require('./routes/booking')
 //Mount our Routes
 app.use('/', profileRoute)               
 app.use('/', authRoute)               
-app.use('/', bookingRoute)               
+app.use('/', bookingRoute)                 
+app.use('/', indexRoute)               
 
 
 
