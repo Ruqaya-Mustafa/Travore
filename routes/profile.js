@@ -1,10 +1,15 @@
-const express = require('express')
+// routes/profile.js
 
-const router = express.Router()
+const express = require('express');
+const router = express.Router();
+const isLoggedIn = require('../lib/isLoggedIn')
+const profileController = require('../controllers/edit');
 
-// const profileController = require('../controllers/profile')
-// const isLoggedIn = require('../lib/isLoggedIn')
+// Route to display the profile edit form
+router.get('/profile/edit',isLoggedIn, profileController.editProfileForm);
 
-// router.get('/profile/add', isLoggedIn, profileController.profile_create_get)
+// Route to handle profile updates
+router.post('/profile/edit',isLoggedIn , profileController.updateProfile);
 
-module.exports = router
+module.exports = router;
+
