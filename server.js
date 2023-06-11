@@ -8,7 +8,7 @@ const passport = require('./lib/passportConfig')
 //Initialise our app (Invoking express and store it in app so we can use it easlly)
 const app = express();
 
-const port = 4500;
+const port = 4555;
 
 app.use(expressLayout)
 app.set('view engine', 'ejs')           // set our view engine to ejs
