@@ -12,6 +12,7 @@
     <nav>
         <h3>TRAVORE</h3>
         <% if (currentUser) {%>
+            <a href="/profile/edit?id=<%=currentUser._id %>">Profile</a>
             <a href="/auth/logout">Log Out</a>
             <br>
             <%= currentUser.firstName %>
