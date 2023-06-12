@@ -1,0 +1,53 @@
+<h3>Update Booking Form</h3>
+
+
+<form method="POST" action="/booking/update">
+    <div>
+        <label>First Name: </label>
+        <input type="text" name="firstName" value="<%= booking.firstName %>">
+    </div>
+<br>
+    <div>
+        <label>Last Name: </label>
+        <input type="text" name="lastName" value="<%=booking.lastName%>">
+    </div>
+<br>
+    <div>
+        <label>Email: </label>
+        <input type="text" name="email" value="<%=booking.email%>">
+    </div>
+<br>
+    <div>
+        <label>Mobile: </label>
+        <input type="text" name="mobile" value="<%=booking.mobile%>">
+    </div>
+<br>
+<div>
+    <label>From: </label>
+    <input type="date" name="from" value="<%=booking.from%>">
+</div>
+<br>
+<div>
+    <label>To: </label>
+    <input type="date" name="to" value="<%=booking.to%>">
+</div>
+<br>
+
+    <div>
+        <label>Country: </label>
+        <select name="country"> 
+            <% countries.forEach(function(obj){ %> 
+                <option value="<%= obj._id %>"
+                <% if( booking.country.name   ===  obj.name ){%>    
+                      selected = "selected" 
+                <% } %>
+                ><%= obj.name %></option>
+            <% }) %>
+        </select>     
+    </div>
+
+    <br>
+    <input type="hidden" name="id" value = "<%= booking._id %>">
+    <input type="submit" value="Submit">
+</form>
+<br>
