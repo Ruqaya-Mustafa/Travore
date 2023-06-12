@@ -12,8 +12,8 @@
     <nav>
         <h3>TRAVORE</h3>
         <% if (currentUser) {%>
-            <div class="co">
-            <a href="/auth/logout" class="btn">Log Out</a>
+            <a href="/profile/edit?id=<%=currentUser._id %>">Profile</a>
+            <a href="/auth/logout">Log Out</a>
             <br>
             <%= currentUser.firstName %>
         <% } else {%>

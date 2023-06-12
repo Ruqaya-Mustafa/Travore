@@ -1,0 +1,69 @@
+<h3>Booking Form</h3>
+
+
+<form method="POST" action="/booking/add">
+    <div>
+        <label>First Name: </label>
+        <input type="text" name="firstName">
+    </div>
+<br>
+    <div>
+        <label>Last Name: </label>
+        <input type="text" name="lastName">
+    </div>
+<br>
+    <div>
+        <label>Email: </label>
+        <input type="text" name="email">
+    </div>
+<br>
+    <div>
+        <label>Mobile: </label>
+        <input type="text" name="mobile">
+    </div>
+<br>
+    <div>
+        <label>From: </label>
+        <input type="datetime-local" name="from">
+
+    </div>
+<br>
+    <div>
+        <label>To: </label>
+        <input type="datetime-local" name="to">
+    </div>
+<br>
+    <div>
+        <label>Country: </label>
+        <select name="country"> 
+            <% countries.forEach(function(con){ %> 
+                <option value="<%= con._id %>"><%= con.name %></option>
+            <% }) %>
+        </select>  
+    </div>
+<!-- <br>
+    <div>
+        <label>Status: </label>
+        <select name="status"> 
+            < % status.forEach(function(stat){ %> 
+                <option value="< %= stat._id %>">< %= stat.name %></option>
+            < % }) %>
+        </select>  
+    </div>
+<br>
+    <div>
+        <label>City: </label>
+        <select name="city"> 
+            < % cities.forEach(function(city){ %> 
+                <option value="< %= city._id %>">< %= city.name %></option>
+            < % }) %> 
+        </select> 
+    </div> -->
+    
+    <br>
+
+    <input type="submit" value="Submit">
+</form>
+
+<br>
+<br>
