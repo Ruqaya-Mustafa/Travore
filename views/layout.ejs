@@ -8,19 +8,31 @@
     <link rel="stylesheet" href="../CSS/main.css">
 </head>
 <body>
-<img src="https://i.ibb.co/sjWCrbJ/f-min.jpg" alt="">
+<div><img src="https://i.ibb.co/SnymB0v/Travel-Explore-the-World-Banner-Landscape.png" alt="Travel-Explore-the-World-Banner-Landscape">></div>
     <nav>
         <h3>TRAVORE</h3>
         <% if (currentUser) {%>
-            <a href="/auth/logout">Log Out</a>
+            <div class="co">
+            <a href="/auth/logout" class="btn">Log Out</a>
             <br>
             <%= currentUser.firstName %>
         <% } else {%>
-            <a href="/auth/signup">Sign Up</a>
-            <a href="/auth/signin">Sign In</a>
+            <a href="/auth/signup" class="btn">Sign Up</a>
+            <a href="/auth/signin" class="btn">Sign In</a>
+            </div>
         <% } %>
+    
     </nav>
-    </nav>
+    </nav>   <h1>
+        We Welcome Every One 
+        <div class="text-container">
+            <span style="--i: 0">مرحباً</span>
+            <span style="--i: 1">Hello</span>
+            <span style="--i: 2">Ola</span>
+            <span style="--i: 3">こ ん に ち は</span>
+            <span style="--i: 4">خوش آمديد</span>
+        </div>
+    </h1>
 
     <%- body %>
 
