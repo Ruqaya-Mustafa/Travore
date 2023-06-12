@@ -19,45 +19,46 @@
 <br>
     <div>
         <label>Mobile: </label>
-        <input type="number" name="mobile">
+        <input type="text" name="mobile">
     </div>
 <br>
     <div>
         <label>From: </label>
-        <input type="Date" name="from">
+        <input type="datetime-local" name="from">
+
     </div>
 <br>
     <div>
         <label>To: </label>
-        <input type="Date" name="to">
+        <input type="datetime-local" name="to">
     </div>
 <br>
     <div>
         <label>Country: </label>
-        <select name="country" multiple = "multiple"> 
-            <% countries.forEach(function(country){ %> 
-                <option value="<%= country._id %>"><%= country.name %></option>
+        <select name="country"> 
+            <% countries.forEach(function(con){ %> 
+                <option value="<%= con._id %>"><%= con.name %></option>
             <% }) %>
         </select>  
     </div>
-<br>
+<!-- <br>
     <div>
         <label>Status: </label>
-        <select name="status" multiple = "multiple"> 
-            <% statuses.forEach(function(status){ %> 
-                <option value="<%= status._id %>"><%= status.name %></option>
-            <% }) %>
+        <select name="status"> 
+            < % status.forEach(function(stat){ %> 
+                <option value="< %= stat._id %>">< %= stat.name %></option>
+            < % }) %>
         </select>  
     </div>
 <br>
     <div>
         <label>City: </label>
-        <select name="city" multiple = "multiple"> 
-            <% cities.forEach(function(city){ %> 
-                <option value="<%= city._id %>"><%= city.name %></option>
-            <% }) %>
-        </select>  
-    </div>
+        <select name="city"> 
+            < % cities.forEach(function(city){ %> 
+                <option value="< %= city._id %>">< %= city.name %></option>
+            < % }) %> 
+        </select> 
+    </div> -->
     
     <br>
 
