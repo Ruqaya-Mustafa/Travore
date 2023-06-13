@@ -11,6 +11,7 @@ const bookingSchema = mongoose.Schema({
     mobile:{type: Number, required: true},
     from:{type: Date, required: true},
     to:{type: Date, required: true},
+    // isPackage: Boolean,
     country: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Country'    

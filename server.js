@@ -40,6 +40,7 @@ const profileRoute = require('./routes/profile')
 const authRoute = require('./routes/auth')
 const bookingRoute = require('./routes/booking')
 const indexRoute = require('./routes/index')
+const packagesRoute = require('./routes/packages')
 
 
 
@@ -49,6 +50,7 @@ app.use('/', profileRoute)
 app.use('/', authRoute)               
 app.use('/', bookingRoute)                 
 app.use('/', indexRoute)               
+app.use('/', packagesRoute)               
 
 
 

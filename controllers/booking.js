@@ -1,5 +1,4 @@
 const bookingMod = require('../models/booking')
-const User = require('../models/User')
 const countryMod = require('../models/countries')
 // const statusMod = require('../models/status')
 // const cityMod = require('../models/cities')
