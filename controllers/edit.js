@@ -1,4 +1,6 @@
+const bcrypt = require('bcrypt');
 const User = require('../models/User')
+
 
 exports.editProfileForm = async(req, res) => {
     try {
@@ -11,21 +13,23 @@ exports.editProfileForm = async(req, res) => {
         res.send(error.message)
     }}
 
-  
-exports.updateProfile = async (req, res) => {
-    try {
-      const { id, firstname,lastname, email,newPassword, confirmNewPassword } = req.body;
+    exports.updateProfile = async (req, res) => {
+      try {
+        const { id, firstname, lastname, email, newPassword, confirmNewPassword } = req.body;
     
-      if (newPassword && newPassword !== confirmNewPassword) {
-        throw new Error("Passwords don't match");
-        
-      } else {
-        await User.findByIdAndUpdate(req.query.id, req.body)
-      }
-
-      res.redirect('/');
-    } catch (error) {
+        if (newPassword && newPassword !== confirmNewPassword) {
+          throw new Error("Passwords don't match");
+        } else {
+          const user = await User.findByIdAndUpdate(req.query.id, { password: bcrypt.hashSync(newPassword, 10) });
+    
+          console.log('Updated user: ', user);
+        }
+    
+        res.redirect('/');
+      } catch (error) {
         console.log(error.message);
         res.redirect(`/profile/edit?id=${req.query.id}`);
-    }
+      }
     };
+    
+   
