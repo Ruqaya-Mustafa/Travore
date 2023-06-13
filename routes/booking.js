@@ -13,4 +13,6 @@ router.get('/booking/update', isLoggedIn, bookingCtrl.update_booking_get)
 router.post('/booking/update', isLoggedIn, bookingCtrl.update_booking_post)
 
 
+
+
 module.exports=router;

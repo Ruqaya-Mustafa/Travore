@@ -22,14 +22,15 @@
         <input type="text" name="mobile" value="<%=booking.mobile%>">
     </div>
 <br>
+<% if (!booking.isPackage) { %> 
 <div>
     <label>From: </label>
-    <input type="date" name="from" value="<%=booking.from%>">
+    <input type="datetime-local" name="from" value="<%=booking.from%>">
 </div>
 <br>
 <div>
     <label>To: </label>
-    <input type="date" name="to" value="<%=booking.to%>">
+    <input type="datetime-local" name="to" value="<%=booking.to%>">
 </div>
 <br>
 
@@ -45,7 +46,7 @@
             <% }) %>
         </select>     
     </div>
-
+<% } %>
     <br>
     <input type="hidden" name="id" value = "<%= booking._id %>">
     <input type="submit" value="Submit">

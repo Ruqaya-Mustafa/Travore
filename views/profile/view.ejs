@@ -1,0 +1,23 @@
+<% if (currentUser) {%>
+<h3> <%= currentUser.firstName %>'s Profile</h3>
+
+                                      
+        <div>
+            <div>First Name: <%= currentUser.firstName %></div>
+        </div>
+        <br>
+        <div>
+            <div>Last Name: <%= currentUser.lastName %></div>
+        </div>
+        <br>
+        <div>
+            <div>Email: <%= currentUser.email %></div>
+        </div>
+        <br>
+        <a href="/booking/all?id=<%=user._id%>">My Booking</a> 
+        <a href="/profile/edit?id=<%=currentUser._id %>">Update Profile</a>
+
+
+
+<br>
+<% } %>

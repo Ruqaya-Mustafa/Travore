@@ -29,7 +29,17 @@ exports.editProfileForm = async(req, res) => {
       } catch (error) {
         console.log(error.message);
         res.redirect(`/profile/edit?id=${req.query.id}`);
+    }
+   }
+
+
+    exports.view_profile_get = async (req,res) => {
+      try {
+          const user = await User.find()
+          console.log(user)
+          res.render('profile/view', { user }) 
+      } catch (error){
+          res.send(error.message)
       }
-    };
-    
-   
+  }
+
