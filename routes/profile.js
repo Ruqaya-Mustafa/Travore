@@ -11,5 +11,8 @@ router.get('/profile/edit',isLoggedIn, profileController.editProfileForm);
 // Route to handle profile updates
 router.post('/profile/edit',isLoggedIn , profileController.updateProfile);
 
+//
+router.get('/profile/view',isLoggedIn , profileController.view_profile_get)
+
 module.exports = router;
 
