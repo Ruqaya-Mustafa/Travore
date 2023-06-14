@@ -42,7 +42,7 @@ exports.auth_logout_get = (req,res) => {
             return next()
         }
         else{
-            res.redirect('/auth/signin')
+            res.redirect('/')
         }
     })
 }

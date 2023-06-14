@@ -25,7 +25,7 @@ exports.editProfileForm = async(req, res) => {
           console.log('Updated user: ', user);
         }
     
-        res.redirect('/');
+        res.redirect('/profile/view');
       } catch (error) {
         console.log(error.message);
         res.redirect(`/profile/edit?id=${req.query.id}`);
