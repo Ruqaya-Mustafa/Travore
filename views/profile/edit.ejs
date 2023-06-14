@@ -6,34 +6,39 @@
   <title>Profile</title>
 </head>
 <body>
-  <h1>Welcome, <%= currentUser.firstName %> <%= currentUser.lastName %>!</h1>
+  <div class="prof">
+  <h2>Update Profile</h2>
   
   <form method="POST" action="/profile/edit?id=<%= currentUser._id %>" >
     <div>
       <label>First Name:</label>
       <input type="text" name="firstName" value="<%= currentUser.firstName %>" required>
     </div>
-    
+    <br>
     <div>
       <label>Last Name:</label>
       <input type="text" name="lastName" value="<%= currentUser.lastName %>" required>
     </div>
-    
+    <br>
     <div>
       <label>Email:</label>
       <input type="email" name="email" value="<%= currentUser.email %>" required>
     </div>
+    <br>
     <div>
       <label>New Password:</label>
       <input type="password" name="newPassword">
     </div>
-
+    <br>
     <div>
       <label>Confirm New Password:</label>
       <input type="password" name="confirmNewPassword">
     </div>
+    <br>
     <button type="submit">Update</button>
+    <button href="/profile/view">Back</button>
   </form>
+</div>
 </body>
 </html>
 

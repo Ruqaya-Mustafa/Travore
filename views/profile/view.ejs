@@ -1,7 +1,8 @@
-<% if (currentUser) {%>
-<h3> <%= currentUser.firstName %>'s Profile</h3>
+<div class="prof">
 
-                                      
+<% if (currentUser) {%>
+    <h1>Welcome, <%= currentUser.firstName %>  !</h1>
+
         <div>
             <div>First Name: <%= currentUser.firstName %></div>
         </div>
@@ -16,8 +17,7 @@
         <br>
         <a href="/booking/all?id=<%=user._id%>">My Booking</a> 
         <a href="/profile/edit?id=<%=currentUser._id %>">Update Profile</a>
-
-
-
-<br>
+        <br>
 <% } %>
+
+</div>
