@@ -1,0 +1,50 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="../CSS/profile.css">
+  <title>Profile</title>
+</head>
+<body>
+  <div class="profile-box">
+  <% if (currentUser) {%>
+    <h1>Welcome, <%= currentUser.firstName %>  !</h1>
+
+  <!-- <form method="POST" action="/profile/edit?id=< %= currentUser._id %>" >
+ -->
+
+  
+    <div class="user-box">
+      
+      <label>First Name: <%= currentUser.firstName %></label>
+      
+    </div>
+<br>
+<br>
+<br>
+    <div class="user-box">
+     
+      <labe>Last Name: <%= currentUser.lastName %></labe>
+    </div>
+<br>
+
+
+    <div class="user-box">
+      
+      <label>Email: <%= currentUser.email %></labe>
+      
+
+    </div>
+<br>
+    <br>
+            <a href="/booking/all?id=<%=user._id%>">My Booking</a> 
+
+            
+            <a href="/profile/edit?id=<%=currentUser._id %>">Change Password</a>
+            <br>
+    <% } %>
+  </form>
+
+
+</div>
+</body>
+</html>

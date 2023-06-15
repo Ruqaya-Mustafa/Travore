@@ -1,69 +1,106 @@
-<h3>Booking Form</h3>
-
-
-<form method="POST" action="/booking/add">
-    <div>
-        <label>First Name: </label>
-        <input type="text" name="firstName">
+<div class="add"> 
+    
+    
+    <link rel="stylesheet" href="../CSS/booking/add.css">
+    <div class="add-box">
+    <form method="POST" action="/booking/add" >
+        <h3>Booking Form</h3>
+    <br>
+    <div class="one">
+            <div class="user-box">
+                <input type="text" name="firstName">
+                <br>
+                <label>First Name: </label>
+                
+            </div>
+            <div class="user-box">
+                <input type="text" name="lastName">
+                <br>
+                <label>Last Name: </label>
+               
+            </div>
+        </div>
+         
+        <div class="user-box">
+            <input type="text" name="email">
+            <br>
+            <label>Email: </label>
+            
+        </div>
+    <br>
+        <div class="user-box">
+            <input type="text" name="mobile">
+            <br>
+            <label>Mobile: </label>
+            
+        </div>
+    <br>
+        <div class="user-box">
+            <input type="datetime-local" name="from">
+            <br>
+            <label>From: </label>
+            
+    
+        </div>
+    <br>
+        <div class="user-box">
+            <input type="datetime-local" name="to">
+            <br>
+            <label>To: </label>
+            
+        </div>
+    <br>
+        <div class="user-box">
+            
+            <label>Country: </label>
+            <br>
+            <br>
+            <select name="country"> 
+                <% countries.forEach(function(con){ %> 
+                    <option value="<%= con._id %>"><%= con.name %></option>
+                <% }) %>
+            </select>  
+            
+            
+        </div>
+    <!-- <br>
+        <div>
+            <label>Status: </label>
+            <select name="status"> 
+                < % status.forEach(function(stat){ %> 
+                    <option value="< %= stat._id %>">< %= stat.name %></option>
+                < % }) %>
+            </select>  
+        </div>
+    <br>
+        <div>
+            <label>City: </label>
+            <select name="city"> 
+                < % cities.forEach(function(city){ %> 
+                    <option value="< %= city._id %>">< %= city.name %></option>
+                < % }) %> 
+            </select> 
+        </div> -->
+        
+     
+        <input type="hidden" name="isPackage" value = "false">
+    
+       
+        <a href="#">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <input type="submit" value="Submit">
+        </a>
+    </form>
     </div>
-<br>
-    <div>
-        <label>Last Name: </label>
-        <input type="text" name="lastName">
-    </div>
-<br>
-    <div>
-        <label>Email: </label>
-        <input type="text" name="email">
-    </div>
-<br>
-    <div>
-        <label>Mobile: </label>
-        <input type="text" name="mobile">
-    </div>
-<br>
-    <div>
-        <label>From: </label>
-        <input type="datetime-local" name="from">
-
-    </div>
-<br>
-    <div>
-        <label>To: </label>
-        <input type="datetime-local" name="to">
-    </div>
-<br>
-    <div>
-        <label>Country: </label>
-        <select name="country"> 
-            <% countries.forEach(function(con){ %> 
-                <option value="<%= con._id %>"><%= con.name %></option>
-            <% }) %>
-        </select>  
-    </div>
-<!-- <br>
-    <div>
-        <label>Status: </label>
-        <select name="status"> 
-            < % status.forEach(function(stat){ %> 
-                <option value="< %= stat._id %>">< %= stat.name %></option>
-            < % }) %>
-        </select>  
-    </div>
-<br>
-    <div>
-        <label>City: </label>
-        <select name="city"> 
-            < % cities.forEach(function(city){ %> 
-                <option value="< %= city._id %>">< %= city.name %></option>
-            < % }) %> 
-        </select> 
-    </div> -->
+    <br>
+    <br>
+    
+    
     
     <br>
-
-    <input type="submit" value="Submit">
-</form>
-
-<br>
-<br>
+    <br>
+    </div>
+    

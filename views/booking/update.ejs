@@ -1,53 +1,84 @@
-<h3>Update Booking Form</h3>
+<div class="update-box">
 
-
-<form method="POST" action="/booking/update">
+    <link rel="stylesheet" href="../CSS/booking/update.css">
+    <form method="POST" action="/booking/update">
+        
+        <h3>Update Booking Form</h3>
+    
+        <div class="user-box">
+            <input type="text" name="firstName" value="<%= booking.firstName %>">
+            <br>
+            <label>First Name: </label> 
+            
+        </div>
+     
+    
+    
+    <br>
+        <div class="user-box">
+            <input type="text" name="lastName" value="<%=booking.lastName%>">
+            <br>
+            <label>Last Name: </label>
+           
+        </div>
+    <br>
+        <div class="user-box">
+            <input type="text" name="email" value="<%=booking.email%>">
+            <br>
+            <label>Email: </label>
+            
+        </div>
+    <br>
+        <div class="user-box">
+            <input type="text" name="mobile" value="<%=booking.mobile%>">
+            <br>
+            <label>Mobile: </label>
+            
+        </div>
+    <br>
+    <% if (!booking.isPackage) { %> 
     <div>
-        <label>First Name: </label>
-        <input type="text" name="firstName" value="<%= booking.firstName %>">
+        <label>From: </label>
+        <input type="datetime-local" name="from" value="<%=booking.from%>">
     </div>
-<br>
+    <br>
     <div>
-        <label>Last Name: </label>
-        <input type="text" name="lastName" value="<%=booking.lastName%>">
+        <label>To: </label>
+        <input type="datetime-local" name="to" value="<%=booking.to%>">
     </div>
-<br>
-    <div>
-        <label>Email: </label>
-        <input type="text" name="email" value="<%=booking.email%>">
-    </div>
-<br>
-    <div>
-        <label>Mobile: </label>
-        <input type="text" name="mobile" value="<%=booking.mobile%>">
-    </div>
-<br>
-<div>
-    <label>From: </label>
-    <input type="date" name="from" value="<%=booking.from%>">
-</div>
-<br>
-<div>
-    <label>To: </label>
-    <input type="date" name="to" value="<%=booking.to%>">
-</div>
-<br>
-
-    <div>
-        <label>Country: </label>
-        <select name="country"> 
-            <% countries.forEach(function(obj){ %> 
-                <option value="<%= obj._id %>"
-                <% if( booking.country.name   ===  obj.name ){%>    
-                      selected = "selected" 
-                <% } %>
-                ><%= obj.name %></option>
-            <% }) %>
-        </select>     
-    </div>
+    <br>
+    
+        </div>
 
     <br>
-    <input type="hidden" name="id" value = "<%= booking._id %>">
-    <input type="submit" value="Submit">
-</form>
-<br>
+        <div class="user-box">
+            
+                <label>Country: </label>
+                <br>
+                <br>
+                <select name="country"> 
+                    <% countries.forEach(function(obj){ %> 
+                        <option value="<%= obj._id %>"
+                        <% if( booking.country.name   ===  obj.name ){%>    
+                              selected = "selected" 
+                        <% } %>
+                        ><%= obj.name %></option>
+                    <% }) %>
+                </select>     
+            
+        
+            <br>
+           
+            
+            
+        </div>
+    <% } %>
+        <br>
+    
+        <input type="hidden" name="id" value = "<%= booking._id %>">
+            <input type="submit" value="Submit">
+
+    </form>
+    <br>
+    </div>
+    

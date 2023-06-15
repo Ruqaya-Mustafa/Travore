@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Bali</title>
+  <link rel="stylesheet" href="../CSS/bali.css">
+
+</head>
+
+  
+<!-- partial:index.partial.html -->
+
+
+
+    
+
+
+<div class="carousel">
+  
+  <div class="carousel__nav">
+    
+   <span id="moveLeft" class="carousel__arrow">
+        <svg class="carousel__icon" width="24" height="24" viewBox="0 0 24 24">
+    <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
+</svg>
+    </span>
+    <span id="moveRight" class="carousel__arrow" >
+      <svg class="carousel__icon"  width="24" height="24" viewBox="0 0 24 24">
+  <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
+</svg>    
+    </span>
+  </div>
+  <div class="carousel-item carousel-item--1">
+    <div class="carousel-item__image"></div>
+    <div class="carousel-item__info">
+      <div class="carousel-item__container">
+      <h2 class="carousel-item__subtitle">Bali</h2>
+      <h1 class="carousel-item__title">Indonesia</h1>
+      <p class="carousel-item__description">Bali, the most popular island holiday destination in the Indonesian archipelago. It’s home to an ancient culture that's known for its warm hospitality as well as exotic temples and palaces set against stunning natural backdrops. Dining in Bali presents endless choices of exotic, local cuisine.</p>
+      <a href="https://www.youtube.com/watch?v=CBwKJfrm5-U"target="_blank" class="carousel-item__btn">Explore the tour</a>
+        </div>
+    </div>
+  </div>
+  <div class="carousel-item carousel-item--2">
+    <div class="carousel-item__image"></div>
+    <div class="carousel-item__info">
+      <div class="carousel-item__container">
+      <h2 class="carousel-item__subtitle">Package</h2>
+      <h1 class="carousel-item__title">20 Days</h1>
+      <p class="carousel-item__description"><strong>From</strong>  13 sep 2023 at 8:30am <br>
+        <strong>To</strong> 30 sep 2023 9:00pm <br>
+       <strong>The Package include :</strong><br> ticket - Hotel - 3 Meals - The tourist program .</p>
+       <div class="packages">
+        <!-- <h3>Indonesia - Bali</h3>
+        <p>From: WED 13 Sep 2023&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;at: 8:30am <br><br> To: SAT 30 Sep 2023&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;at: 9:00pm </p> -->
+    
+    
+        <h1>Weather Information</h1>
+      
+      <% if (temp ) { %>
+        <p>Tempature: <%= temp %>K</p>
+        <p>Description: <%= description %></p>
+        <p>Speed: <%= speed %></p>
+        <p>Clouds: <%= all %></p>
+    
+        <!-- Add more weather data as needed -->
+      <% } else { %>
+        <p>No weather data available</p>
+      <% } %>
+    
+        
+    </div>
+       <p> <strong>1000</strong>$</p>
+       
+       <a href="/packages/indonesia">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <input type="submit" value="Book Now">
+      </a>
+        </div>
+    </div>
+  </div>
+
+  </div>
+  
+</div>
+
+<!-- partial -->
+  
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script>
+  $(function(){
+    $('.carousel-item').eq(0).addClass('active');
+    var total = $('.carousel-item').length;
+    var current = 0;
+    $('#moveRight').on('click', function(){
+      var next=current;
+      current= current+1;
+      setSlide(next, current);
+    });
+    $('#moveLeft').on('click', function(){
+      var prev=current;
+      current = current- 1;
+      setSlide(prev, current);
+    });
+    function setSlide(prev, next){
+      var slide= current;
+      if(next>total-1){
+       slide=0;
+        current=0;
+      }
+      if(next<0){
+        slide=total - 1;
+        current=total - 1;
+      }
+             $('.carousel-item').eq(prev).removeClass('active');
+             $('.carousel-item').eq(slide).addClass('active');
+        setTimeout(function(){
+  
+        },800);
+      
+  
+      
+      console.log('current '+current);
+      console.log('prev '+prev);
+    }
+  });
+</script>
+
+</body>
+</html>

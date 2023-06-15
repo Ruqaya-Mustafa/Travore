@@ -1,26 +1,56 @@
-<h2>Ceate New Account Here </h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../CSS/signup.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="signup-box">
+    <h2>Sign in to your Account</h2>
+    
+    <form method="POST" action="/auth/signup">
+    
+    
+        <div class="user-box">
+          <input type="text" name="firstName" required="">
+          <label>First Name</label>
+        </div>
 
-<form method="POST" action="/auth/signup">
-    <div>
-        <label>First Name</label>
-        <input type="text" name="firstName">
+        <div class="user-box">
+          <input type="text" name="lastName" required="">
+          <label>last Name</label>
+        </div>
+
+
+        <div class="user-box">
+          <input type="email" name="email" required="">
+          <label>Email</label>
+        </div>
+    
+    
+   
+    
+        <div class="user-box">
+          <input type="password" name="password" required="">
+          <label>Password</label>
+        </div>
+    <br>
+        
+        <a href="#">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <input type="submit" value="Submit">
+        </a>
+
+        
+    </form>
+    <br>
     </div>
-<br>
-    <div>
-        <label>Last Name</label>
-        <input type="text" name="lastName">
-    </div>
-<br>
-    <div>
-        <label>Email Address</Address></label>
-        <input type="email" name="email">
-    </div>
-<br>
-    <div>
-        <label>Password</Address></label>
-        <input type="password" name="password">
-    </div>
-<br>
-    <input type="submit" value="Submit">
-</form>
-<br>
+</div>
+</body>
+</html>
