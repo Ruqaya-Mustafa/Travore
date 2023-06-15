@@ -1,33 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRAVORE</title>
-    <link rel="stylesheet" href="../CSS/main.css">
-</head>
-<body>
-    <h1>TRAVORE</h1>
-    <nav>
-        <a class="nav" href="/">Home</a>
-        <a class="nav" href="/about/about">About</a>
-        <a class="nav" href="/booking/add">Book Now</a>
-        <% if (currentUser) {%>
-            <a class="nav" href="/profile/view?id=<%=currentUser._id %>"><%= currentUser.firstName %></a>
-            <a class="nav" href="/auth/logout">Log Out</a>
-            <br>
-            <%= currentUser.firstName %>
-        <% } else {%>
-            <a class="nav" href="/auth/signup">Sign Up</a>
-            <a class="nav" href="/auth/signin">Sign In</a>
-        <% } %>
-    </nav>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../CSS/main.css">
+   <title>TRAVORE</title>
+  </head>
+  <body>
+    <ul>
+      <li><a class="" href="/">TRAVORE</a></li>
+      <li><a class="" href="/">Home</a></li>
+      <li><a href="/about/about">About</a></li>
+      <li><a href="/booking/add">Booking Now</a></li>
 
-    <%- body %>
+
+
+      <% if (currentUser) {%>
+        <li><a class="" href="/profile/view?id=<%=currentUser._id %>"><%= currentUser.firstName %></a></li>
+       <li><a class="" href="/auth/logout">Log Out</a></li>
+        <br>
+       
+    <% } else {%>
+        <li><a class="" href="/auth/signup">Sign Up</a></li>
+        <li><a class="" href="/auth/signin">Sign In</a></li>
+    <% } %>
+
+
+    </ul>
+    
 
   
-   <footer>Contact: info@travore.com</footer>
+
+  <%- body %>
+
+<div class="footer">
+  <br>
+ 
+  <p><strong>Contact : INFO@TRAVORE.COM</strong> </p>
+</div>
+
 </body>
+
+
+
+
+  
 
 </html>

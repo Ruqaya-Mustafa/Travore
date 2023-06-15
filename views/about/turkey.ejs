@@ -1,8 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - FlexBox Exercise #3 - Image carousel</title>
+  <link rel="stylesheet" href="../CSS/turkey.css">
+
+</head>
+
+  
+<!-- partial:index.partial.html -->
 
 
-<div class="packages">
-    <h3>Japan</h3>
-    <p>From: WED 15 Nov 2023&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;at: 11:30am <br><br> To: THU 30 Nov 2023&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;at: 4:00pm </p>
 
-    <a href="/packages/turkey">Book Now</a>
+    
+
+
+<div class="carousel">
+  
+  <div class="carousel__nav">
+    
+   <span id="moveLeft" class="carousel__arrow">
+        <svg class="carousel__icon" width="24" height="24" viewBox="0 0 24 24">
+    <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
+</svg>
+    </span>
+    <span id="moveRight" class="carousel__arrow" >
+      <svg class="carousel__icon"  width="24" height="24" viewBox="0 0 24 24">
+  <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
+</svg>    
+    </span>
+  </div>
+  <div class="carousel-item carousel-item--1">
+    <div class="carousel-item__image"></div>
+    <div class="carousel-item__info">
+      <div class="carousel-item__container">
+      <h2 class="carousel-item__subtitle">Istanbul</h2>
+      <h1 class="carousel-item__title">Turkey</h1>
+      <p class="carousel-item__description">Istanbul is one of the world's most attractive cities, offering you a sneak peek into the past. At the same time, you get a beautiful blend of modern architecture infused with technology applications. The city is full of exciting places, so you get many things to do in Istanbul. The beautiful attractions, the historical legacy, and the mouth-licking food offer you countless opportunities for things to do in Istanbul.</p>
+      <a href="https://www.youtube.com/watch?v=dTA-uImwnSw"target="_blank" class="carousel-item__btn">Explore the tour</a>
+        </div>
+    </div>
+  </div>
+  <div class="carousel-item carousel-item--2">
+    <div class="carousel-item__image"></div>
+    <div class="carousel-item__info">
+      <div class="carousel-item__container">
+      <h2 class="carousel-item__subtitle">Package</h2>
+      <h1 class="carousel-item__title">15 Days</h1>
+      <p class="carousel-item__description"><strong>From</strong>  15 Nov 2023 at 11:30am <br>
+        <strong>To</strong> 30 Nov 2023 4:00pm <br>
+       <strong>The Package include :</strong><br> ticket - Hotel - 3 Meals - The tourist program .</p>
+
+       <div class="packages">
+        <!-- <h3>Russia - Moscow</h3>
+        <p>From: SUN 5 Nov 2023&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;at: 5:00pm <br><br> To: MON 20 Nov 2023&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;at: 10:30pm </p>
+        <h1>Weather Information</h1>
+       -->
+       <h1>Weather Information</h1>
+        <% if (temp ) { %>
+          <p>Tempature: <%= temp %>K</p>
+          <p>Description: <%= description %></p>
+          <p>Speed: <%= speed %></p>
+          <p>Clouds: <%= all %></p>
+      
+          <!-- Add more weather data as needed -->
+        <% } else { %>
+          <p>No weather data available</p>
+        <% } %>
+      
+    </div>
+        <p> <strong>1000</strong>$</p>
+      
+        <a href="/packages/turkey">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <input type="submit" value="Book Now">
+        </a>
+        </div>
+    </div>
+  </div>
+    <!-- <div class="carousel-item carousel-item--3">
+    <div class="carousel-item__image"></div>
+    <div class="carousel-item__info">
+      <div class="carousel-item__container">
+      <h2 class="carousel-item__subtitle">Tropical palms </h2>
+      <h1 class="carousel-item__title">Palms</h1>
+      <p class="carousel-item__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+      <a href="#" class="carousel-item__btn">Explore the palms</a>
+        </div>
+    </div> -->
+  <!-- </div> -->
+  
+   <!-- <div class="carousel-item carousel-item--4">
+    <div class="carousel-item__image"></div>
+    <div class="carousel-item__info">
+      <div class="carousel-item__container">
+      <h2 class="carousel-item__subtitle">Beach </h2>
+      <h1 class="carousel-item__title">The beach </h1>
+      <p class="carousel-item__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+      <a href="#" class="carousel-item__btn">Explore the beach</a>
+        </div>
+    </div> 
+  </div>-->
+  
+ <!-- <div class="carousel-item carousel-item--5">
+    <div class="carousel-item__image"></div>
+    <div class="carousel-item__info">
+      <div class="carousel-item__container">
+      <h2 class="carousel-item__subtitle">The white building </h2>
+      <h1 class="carousel-item__title">White building</h1>
+      <p class="carousel-item__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+      <a href="#" class="carousel-item__btn">Read the article</a>
+        </div>
+    </div> -->
+  </div>
+  
 </div>
+
+<!-- partial -->
+  
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script>
+  $(function(){
+    $('.carousel-item').eq(0).addClass('active');
+    var total = $('.carousel-item').length;
+    var current = 0;
+    $('#moveRight').on('click', function(){
+      var next=current;
+      current= current+1;
+      setSlide(next, current);
+    });
+    $('#moveLeft').on('click', function(){
+      var prev=current;
+      current = current- 1;
+      setSlide(prev, current);
+    });
+    function setSlide(prev, next){
+      var slide= current;
+      if(next>total-1){
+       slide=0;
+        current=0;
+      }
+      if(next<0){
+        slide=total - 1;
+        current=total - 1;
+      }
+             $('.carousel-item').eq(prev).removeClass('active');
+             $('.carousel-item').eq(slide).addClass('active');
+        setTimeout(function(){
+  
+        },800);
+      
+  
+      
+      console.log('current '+current);
+      console.log('prev '+prev);
+    }
+  });
+</script>
+</body>
+</html>
+

@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose')
 const expressLayout = require('express-ejs-layouts')
 
+
 const session = require('express-session')
 const passport = require('./lib/passportConfig')
 
@@ -30,6 +31,8 @@ app.use(function(req,res, next){
     next()           //move on to mount our routs
 })
 
+ 
+
 
 
 
@@ -43,14 +46,15 @@ const indexRoute = require('./routes/index')
 const packagesRoute = require('./routes/packages')
 
 
-
  
 //Mount our Routes
 app.use('/', profileRoute)               
 app.use('/', authRoute)               
 app.use('/', bookingRoute)                 
-app.use('/', indexRoute)               
+app.use('/', indexRoute)  
 app.use('/', packagesRoute)               
+
+
 
 
 
@@ -58,6 +62,7 @@ app.listen(port, ()=>{
     console.log(`The port ${port} is running`)
 })
 mongoose.connect('mongodb+srv://travore:Travore06@cluster0.8ghu9kc.mongodb.net/travore',
+
     {
         useNewUrlParser: true,
         useUnifiedTopology: true

@@ -10,6 +10,7 @@ exports.booking_add_get = async (req,res) => {
         const countries = await countryMod.find()
         // const status = await statusMod.find()
         // const cities = await cityMod.find()
+        console.log("countries", countries)
 
         // res.render('booking/add', {countries, status, cities})
         res.render('booking/add', {countries})
@@ -36,7 +37,7 @@ exports.booking_add_post = (req,res) => {
 
 exports.all_bookings_get = async (req,res) => {
     try {
-        const bookings = await bookingMod.find().populate('country')
+        const bookings = await bookingMod.find({user:req.user._id}).populate('country')
         console.log(bookings)
         res.render('booking/all', { bookings}) 
     } catch (error){

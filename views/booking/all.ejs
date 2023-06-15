@@ -1,41 +1,43 @@
 <div class="add">
-<h3>All Your Bookings: </h3>
-
-<!-- < % bookings.forEach(function(booking){ %> 
-    < % if (booking.isPackage === false) { %> 
-        <div>No Bookings to show</div>
-< %} else {%> -->
-
-<table>
-    <tr>                                       
-        <th>Name &nbsp;&nbsp;&nbsp;</th>
-        <th>Mobile &nbsp;&nbsp;&nbsp;</th>
-        <th>From &nbsp;&nbsp;&nbsp;</th>
-        <th>To &nbsp;&nbsp;&nbsp;</th>
-        <th>Country &nbsp;&nbsp;&nbsp;</th>
-    </tr>
-    <% bookings.forEach(function(booking){ %> 
-    <% if (currentUser._id.toString() === booking.user._id.toString()) { %> 
-
-        <tr>
-             <td><%= booking.firstName %> <%= booking.lastName %>&nbsp;&nbsp;&nbsp;</td>                                
-             <td><%= booking.mobile %>&nbsp;&nbsp;&nbsp;</td>                                 
-             <td><%= booking.from %>&nbsp;&nbsp;&nbsp;</td>                               
-             <td><%= booking.to %>&nbsp;&nbsp;&nbsp;</td>    
-             <td>
-                     <%= booking.country.name %>
-             </td>    
-             <td>
-                <form method = "POST" action="/booking/delete?id=<%=booking._id%>">
-                    <button type="submit">DELETE</button>
-                    <a href="/booking/update?id=<%=booking._id%>">UPDATE</a>
-                </form>
-             </td>                             
+    <h3>All Your Bookings: </h3>
+    
+    <!-- < % bookings.forEach(function(booking){ %> 
+        < % if (booking.isPackage === false) { %> 
+            <div>No Bookings to show</div>
+    < %} else {%> -->
+        <% if (bookings.length == 0) { %> 
+            <div>No Bookings to show</div>
+    <% } else { %>
+    <table>
+        <tr>                                       
+            <th>Name &nbsp;&nbsp;&nbsp;</th>
+            <th>Mobile &nbsp;&nbsp;&nbsp;</th>
+            <th>From &nbsp;&nbsp;&nbsp;</th>
+            <th>To &nbsp;&nbsp;&nbsp;</th>
+            <th>Country &nbsp;&nbsp;&nbsp;</th>
         </tr>
-<% } %>  
+        <% bookings.forEach(function(booking){ %> 
+    
+            <tr>
+                 <td><%= booking.firstName %> <%= booking.lastName %>&nbsp;&nbsp;&nbsp;</td>                                
+                 <td><%= booking.mobile %>&nbsp;&nbsp;&nbsp;</td>                                 
+                 <td><%= booking.from %>&nbsp;&nbsp;&nbsp;</td>                               
+                 <td><%= booking.to %>&nbsp;&nbsp;&nbsp;</td>    
+                 <td>
+                         <%= booking.country.name %>
+                 </td>    
+                 <td>
+                    <form method = "POST" action="/booking/delete?id=<%=booking._id%>">
+                        <button type="submit">DELETE</button>
+                        <a href="/booking/update?id=<%=booking._id%>">UPDATE</a>
+                    </form>
+                 </td>                             
+            </tr>
+    
+        <% }) %>  
+    </table>
+    <br>
+    <% } %>
+    </div>
+    
 
-    <% }) %>  
-</table>
-<br>
-<!-- < % } }) %> -->
-</div>

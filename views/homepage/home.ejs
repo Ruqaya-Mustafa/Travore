@@ -1,16 +1,82 @@
-<div class="welc">
-  <img src="https://images.unsplash.com/photo-1483004590101-e3dca99dac40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2091&q=80" alt="main" height="450px" width="1504px">
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script><link rel='stylesheet' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/1356355/responsiveslides.css'><link rel="stylesheet" href="./style.css">
+ <link rel="stylesheet" href="../CSS/homepage.css">
+  <title>Document</title> 
+</head>
+<body>
+  <script>
+    $(document).ready(function() {
+      $("#slider1").responsiveSlides({
+        pager: true,
+        speed: 500,
+        namespace: "transparent-btns"
+      });
+    });
+  </script>
+  <!-- part 3 -->
 
-<div class="about">
-<h2>About Travore</h2>
-<p>Travore is a name that combines the words "travel" and "explore". <br> The website is about a travel agency that helps people to book their flights to explore new countries and adventures.</p>
-</div>
-<br><br>
+  
+  <!-- <a href="https://usecheck.com/" class="btn-shine" target="_blank"> -->
 
-<div>
-  <a href="/about/japan"><img src="https://images.unsplash.com/photo-1528884089-4582fe06c516?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="japan"height="250px" width="370px"/></a>
-  <a href="/about/russia"><img src="https://images.unsplash.com/photo-1547385124-3a363bde4ec8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="russia"height="250px" width="370px"/></a>
-  <a href="/about/indonesia"><img src="https://images.unsplash.com/photo-1550583088-ffe97305e2c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="indonesia"height="250px" width="370px"/></a>
-  <a href="/about/turkey"><img src="https://images.unsplash.com/photo-1589561454226-796a8aa89b05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1167&q=80" alt="turkey"height="250px" width="370px"/></a>
+  <div class="home-slider">
+    <ul class="rslides" id="slider1">
+      
+    <li><img src="https://i.ibb.co/wrJxxDL/1.png" alt="3" alt="slide1" >
+      
+      </li>
+    <li><img src="https://i.ibb.co/rksQCHg/2.png" alt="slide2">
+      
+      </li>
+    <li><img src="https://i.ibb.co/93yvqCK/3.png" alt="slide3">
+      
+      </li>
+  </ul>
 </div>
+<br>
+<br>
+<h2 class="pack">Unveiling the Exotic Charms: Bali, Kyoto, Moscow, and Istanbul - Explore the Extraordinary with Our Travore Packages!</h2> <br>
+<p class="tosee"><strong>Discover the world's most enchanting destinations with our extraordinary travel agency packages! <br> Embark on an unforgettable journey to Bali, where pristine beaches and vibrant cultural heritage await. Dive into the azure waters, explore lush rice terraces, and immerse yourself in the warm hospitality of the Balinese people. For a captivating blend of tradition and modernity, Kyoto beckons with its ancient temples, serene gardens, and captivating geisha culture. Uncover the secrets of Japan's imperial city as you wander through historic streets and witness breathtaking cherry blossoms in bloom. Venture into the heart of Russia with our Moscow package, where grandeur and history intertwine. Marvel at the iconic Red Square, delve into the opulence of the Kremlin, and lose yourself in the world-renowned art collections of the Tretyakov Gallery. Finally, Istanbul bridges the divide between Europe and Asia, offering a captivating fusion of cultures and history. Delight in the majestic beauty of the Hagia Sophia, traverse the bustling Grand Bazaar, and indulge in delectable Turkish cuisine. Let our meticulously crafted packages transport you to these extraordinary destinations, where lifelong memories and awe-inspiring experiences await at every turn.</strong></p>
+<!-- part2 -->
+<section class="hero-section">
+  <div class="card-grid">
+    <a class="card" href="/about/indonesia">
+      <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1573790387438-4da905039392?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=425&q=80)"></div>
+      <div class="card__content">
+        <p class="card__category">1000$</p>
+        <h3 class="card__heading">Indonesia - Bali</h3>
+      </div>
+    </a>
+    <a class="card" href="/about/japan">
+      <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1578469645742-46cae010e5d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80)"></div>
+      <div class="card__content">
+        <p class="card__category">1000$</p>
+        <h3 class="card__heading">Japan - Kyoto</h3>
+      </div>
+    </a>
+    <a class="card" href="/about/russia">
+      <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1554844344-c34ea04258c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=327&q=80)"></div>
+      <div class="card__content">
+        <p class="card__category">800$</p>
+        <h3 class="card__heading">Russia - Moscow</h3>
+      </div>
+    </li>
+    <a class="card" href="/about/turkey">
+      <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1564428366891-dc20b1edf33b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80)"></div>
+      <div class="card__content">
+        <p class="card__category">1000$</p>
+        <h3 class="card__heading">Turkey - Istanbul</h3>
+      </div>
+    </a>
+  <div>
+</section>
+
+
+
+<!-- partial -->
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/1356355/responsiveslides.min.js'></script>
+</body>
+</html>

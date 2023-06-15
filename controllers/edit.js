@@ -41,5 +41,6 @@ exports.editProfileForm = async(req, res) => {
       } catch (error){
           res.send(error.message)
       }
+
   }
 

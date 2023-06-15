@@ -1,3 +1,4 @@
+
 const bookingMod = require('../models/booking')
 
 
@@ -83,12 +84,6 @@ exports.packages_turkey_post = (req,res) => {
         })
 }
 
-
-
-
-
-
-
 exports.packages_indonesia_get = async (req,res) => {
     try{
         res.render('packages/indonesia')
@@ -110,13 +105,7 @@ exports.packages_indonesia_post = (req,res) => {
         .catch((err) => {
             console.log('an Error Occurred',err)
         })
-}
-
-
-
-
-
-
+    }
 
 exports.update_packages_get = async (req,res) => {
     try{

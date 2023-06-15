@@ -16,3 +16,4 @@ router.get('/profile/view',isLoggedIn , profileController.view_profile_get)
 
 module.exports = router;
 
+

@@ -1,43 +1,56 @@
-h1{
-  text-align: center;
-}
-.nav{
-  margin: 0px 120px;
-  color: white;
-}
-nav{
-  background-color: rgb(0, 0, 0);
-  padding-top: 10px;
-  height: 30px;
-}
-footer{
-  text-align: center;
-  color: white;
-  background-color: rgb(0, 0, 0);
-  padding-top: 10px;
-  height: 30px;
-  margin-top: 100px;
-}
-.about{
-  text-align: center;
-  /* height:450px; 
-  width:1504px; */
-}
-.auth {
-  padding-top: 30px;
-  text-align: center;
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+  }
+  body{
+	background-color: #eaeaea;
+  }
+  .pack{
+	color :rgb(4, 112, 103);
+  }
+  li {
+	float: left;
+  }
+  .tosee{
+	color:rgb(149, 163, 163)
+  }
+  .rslides{
+	color:rgb(149, 163, 163)
+  }
+  
+  li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+  }
+  
+  li a:hover {
+	background-color: #111;
+  }
+  /* FOOTER */
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 40px;
+	font-size: 10px;
+
+	background-color: #000000;
+	color: rgb(255, 255, 255);
+	padding: auto;
+	
+	text-align: center;
+	opacity: 0.8;
+	font-size:10px;
+	/* position:fixed; */
 }
 
-.add{
-  text-align: center;
-}
-.pack {
-  text-align: center;
-}
-.prof {
-  text-align: center;
-}
-.packages{
-text-align: center;
-  
-}
+.pageone {
+	height: 800px;
