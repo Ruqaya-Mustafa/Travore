@@ -46,8 +46,6 @@ const indexRoute = require('./routes/index')
 const packagesRoute = require('./routes/packages')
 
 
-
-
  
 //Mount our Routes
 app.use('/', profileRoute)               
@@ -56,7 +54,7 @@ app.use('/', bookingRoute)
 app.use('/', indexRoute)  
 app.use('/', packagesRoute)               
 
-            
+
 
 
 

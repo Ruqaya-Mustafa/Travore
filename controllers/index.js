@@ -10,6 +10,7 @@ exports.packages_get = (req, res) =>{
     res.render('about/about')
 }
 
+
 exports.japan_get = async(req, res) =>{
     const weatherResponsej = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=kyoto&appid=8d020e83cccb5f9f60ba9e5939797cd1`);
     
@@ -91,5 +92,5 @@ exports.turkey_get = async(req, res) =>{
     const all = weatherResponseT.data.clouds.all;
     
     res.render('about/turkey', { temp , description , speed, all});
-    
+
 }
