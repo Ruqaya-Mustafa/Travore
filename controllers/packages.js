@@ -2,8 +2,8 @@
 const bookingMod = require('../models/booking')
 
 
-
-exports.packages_japan_get = async (req,res) => {
+                                                     //FOR THE 4 PACKAGES
+exports.packages_japan_get = async (req,res) => {   //get booking model 
     try{
         res.render('packages/japan')
         } catch(err){
@@ -11,12 +11,12 @@ exports.packages_japan_get = async (req,res) => {
         }
 }
 
-exports.packages_japan_post = (req,res) => {
+exports.packages_japan_post = (req,res) => {       // add new booking to the database
     console.log(req.body)           
-    const booking = new bookingMod(req.body)
+    const booking = new bookingMod(req.body)      // take all the body content and save it in a variable
     
-    booking.user = req.user._id          
-    booking.save()
+    booking.user = req.user._id                   // add user id to the booking 
+    booking.save()                               // save the booking in the database
         .then(() => {   
             console.log('Your booking has been saved !!')
             res.redirect('/booking/all')
