@@ -37,7 +37,7 @@
             
         </div>
     <br>
-    <% if (!booking.isPackage) { %> 
+    <% if (!booking.isPackage) { %>        <!--if the booking is not a package; display from and to dates and the countries list, otherwise dont display it so the user can't change the dates and country for a package-->
     <div>
         <label>From: </label>
         <input type="datetime-local" name="from" value="<%=booking.from%>">
@@ -59,8 +59,8 @@
                 <br>
                 <select name="country"> 
                     <% countries.forEach(function(obj){ %> 
-                        <option value="<%= obj._id %>"
-                        <% if( booking.country.name   ===  obj.name ){%>    
+                        <option value="<%= obj._id %>"                       <!--upload countries list-->
+                        <% if( booking.country.name   ===  obj.name ){%>     <!--let the first selection in the list the previous value of country-->
                               selected = "selected" 
                         <% } %>
                         ><%= obj.name %></option>
@@ -76,7 +76,7 @@
     <% } %>
         <br>
     
-        <input type="hidden" name="id" value = "<%= booking._id %>">
+        <input type="hidden" name="id" value = "<%= booking._id %>"> 
             <input type="submit" value="Submit">
 
     </form>
