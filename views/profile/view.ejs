@@ -7,15 +7,12 @@
 <body>
   <div class="profile-box">
   <% if (currentUser) {%>
-    <h1>Welcome, <%= currentUser.firstName %>  !</h1>
+    <h1>Welcome, <%= currentUser.firstName %>  !</h1>                              <!--show current user first name-->
 
-  <!-- <form method="POST" action="/profile/edit?id=< %= currentUser._id %>" >
- -->
 
-  
     <div class="user-box">
       
-      <label>First Name: <%= currentUser.firstName %></label>
+      <label>First Name: <%= currentUser.firstName %></label>                      <!--show current user first name-->
       
     </div>
 <br>
@@ -23,23 +20,23 @@
 <br>
     <div class="user-box">
      
-      <labe>Last Name: <%= currentUser.lastName %></labe>
+      <labe>Last Name: <%= currentUser.lastName %></labe>                          <!--show current user last name-->
     </div>
 <br>
 
 
     <div class="user-box">
       
-      <label>Email: <%= currentUser.email %></labe>
+      <label>Email: <%= currentUser.email %></labe>                                <!--show current user email-->
       
 
     </div>
 <br>
     <br>
-            <a href="/booking/all?id=<%=user._id%>">My Booking</a> 
+            <a href="/booking/all?id=<%=user._id%>">My Booking</a>                 <!--href for all bookings that current user have-->
 
             
-            <a href="/profile/edit?id=<%=currentUser._id %>">Change Password</a>
+            <a href="/profile/edit?id=<%=currentUser._id %>">Change Password</a>   <!--href for changing password page-->
             <br>
     <% } %>
   </form>
