@@ -1,10 +1,6 @@
 <div class="add">
     <h3>All Your Bookings: </h3>
     
-    <!-- < % bookings.forEach(function(booking){ %> 
-        < % if (booking.isPackage === false) { %> 
-            <div>No Bookings to show</div>
-    < %} else {%> -->
         <% if (bookings.length == 0) { %> 
             <div>No Bookings to show</div>
     <% } else { %>
@@ -27,9 +23,9 @@
                          <%= booking.country.name %>
                  </td>    
                  <td>
-                    <form method = "POST" action="/booking/delete?id=<%=booking._id%>">
+                    <form method = "POST" action="/booking/delete?id=<%=booking._id%>">   <!--it will take that booking id and delete it as in the controller function-->
                         <button type="submit">DELETE</button>
-                        <a href="/booking/update?id=<%=booking._id%>">UPDATE</a>
+                        <a href="/booking/update?id=<%=booking._id%>">UPDATE</a>        <!--it will take that booking id and update it as in the controller function-->
                     </form>
                  </td>                             
             </tr>
