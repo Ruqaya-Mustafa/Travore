@@ -3,7 +3,7 @@ const bookingMod = require('../models/booking')
 
 
                                                      //FOR THE 4 PACKAGES
-exports.packages_japan_get = async (req,res) => {   //get booking model 
+exports.packages_japan_get = async (req,res) => {   //function get booking model 
     try{
         res.render('packages/japan')
         } catch(err){
@@ -107,12 +107,12 @@ exports.packages_indonesia_post = (req,res) => {
         })
     }
 
-exports.update_packages_get = async (req,res) => {
+exports.update_packages_get = async (req,res) => {             //get booking model to update
     try{
-        const booking = await bookingMod.findById(req.query.id)
+        const booking = await bookingMod.findById(req.query.id)   // find that specific booking by id
         // const countries = await countryMod.find()
 
-        res.render('packages/update', {booking})
+        res.render('packages/update', {booking})       
     } catch(error){
         res.send(error.message)
     }
@@ -120,10 +120,10 @@ exports.update_packages_get = async (req,res) => {
 
 
 
-exports.update_packages_post = async (req,res) => {
+exports.update_packages_post = async (req,res) => {          //function to post the changes to the database
     try{
         console.log(req.body.id)
-        await bookingMod.findByIdAndUpdate(req.body.id , req.body)
+        await bookingMod.findByIdAndUpdate(req.body.id , req.body)   //wait to the database to be updated then redirect the user to view all booking page
         res.redirect('/booking/all')
     } catch(error){
         res.send(error.message)
