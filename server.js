@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express');
 const mongoose = require('mongoose')
 const expressLayout = require('express-ejs-layouts')
@@ -61,7 +62,7 @@ app.use('/', packagesRoute)
 app.listen(port, ()=>{
     console.log(`The port ${port} is running`)
 })
-mongoose.connect('mongodb+srv://travore:Travore06@cluster0.8ghu9kc.mongodb.net/travore',
+mongoose.connect(process.env.DB,
 
     {
         useNewUrlParser: true,

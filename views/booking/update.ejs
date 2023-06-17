@@ -58,9 +58,9 @@
                 <br>
                 <br>
                 <select name="country"> 
-                    <% countries.forEach(function(obj){ %> 
-                        <option value="<%= obj._id %>"                       <!--upload countries list-->
-                        <% if( booking.country.name   ===  obj.name ){%>     <!--let the first selection in the list the previous value of country-->
+                    <% countries.forEach(function(obj){ %>      <!--upload countries list and let the first selection in the list the previous value of country-->
+                        <option value="<%= obj._id %>"     
+                        <% if( booking.country.name   ===  obj.name ){%>   
                               selected = "selected" 
                         <% } %>
                         ><%= obj.name %></option>
